@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { RiArrowDownFill } from "react-icons/ri";
 
 export const BirthDate = ({ calculateAge }) => {
   const [birthDate, setBirthDate] = useState("");
@@ -17,12 +18,29 @@ export const BirthDate = ({ calculateAge }) => {
     <div>
       <form
         onSubmit={handleSubmit}
-        className="flex justify-center items-center gap-5"
+        className="w-full flex flex-col justify-center items-center "
       >
-        <input onChange={handleChangeDate} type="date" value={birthDate} />
-        <button disabled={!birthDate} type="submit" className="bg-white">
-          Convert
-        </button>
+        <input
+          className="outline-none font-medium border-[1px] px-8 py-3 sm:py-1"
+          onChange={handleChangeDate}
+          type="date"
+          value={birthDate}
+        />
+        <div className="w-full flex justify-center  items-center">
+          <hr
+            style={{
+              width: "20rem",
+              height: "2px",
+            }}
+          ></hr>
+          <button
+            disabled={!birthDate}
+            type="submit"
+            className="bg-[#7743DB] text-white rounded-[50%] p-4 text-2xl hover:bg-[#8f57f7]"
+          >
+            <RiArrowDownFill />
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -23,15 +23,19 @@ function App() {
       days: ageDays,
     });
 
-    console.log(setAge);
+    // console.log(setAge);
   };
 
   return (
     <>
-      <div className="w-full h-screen mx-auto flex flex-col justify-center items-center gap-6 bg-[#F1EAFF]">
-        <h1 className="font-bold">AGE CALCULATOR</h1>
-        <BirthDate calculateAge={calculateAge} />
-        {age && <Age age={age} />}
+      <div className="w-full h-screen mx-auto flex flex-col justify-center items-center  text-[#61677A]">
+        <div className="bg-white sm:rounded-lg rounded-br-[8rem] sm:rounded-br-[20rem] py-[12rem] px-2 sm:p-[10rem] flex flex-col justify-center items-center gap-10 sm:gap-1 ">
+          <h1 className="font-bold text-4xl sm:text-3xl mb-3 tracking-widest text-center px-2">
+            AGE CALCULATOR
+          </h1>
+          <BirthDate calculateAge={calculateAge} />
+          {age && <Age age={age} />}
+        </div>
       </div>
     </>
   );

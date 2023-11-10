@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Clash Display", sans-serif;
+  background-color: #f5f5f5;
+}
